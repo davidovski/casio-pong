@@ -14,6 +14,7 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+#include <gint/gint.h>
 #include <gint/display.h>
 #include <gint/keyboard.h>
 #include <gint/keycodes.h>
@@ -39,6 +40,8 @@ int h = 16;
 int w = 2;
 int main(void)
 {
+	gint_setrestart(1);
+	
 	int tick = 1;
 	bool game = true;
 	while (game) {
@@ -55,7 +58,7 @@ int main(void)
 		pollevent();
 
 		if (keydown(KEY_EXIT)) 
-			game = false;
+			gint_osmenu();
 
 		if (keydown(KEY_1) && p1 + h < 64)  
 				p1 += 1;
@@ -113,6 +116,7 @@ int main(void)
 		tick++;
 		sleep_us(20*1000);
 	}
-	game = true;
+	
+
 	return 0;
 }

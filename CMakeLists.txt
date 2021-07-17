@@ -28,14 +28,14 @@ set(ASSETS_cg
 
 fxconv_declare_assets(${ASSETS} ${ASSETS_fx} ${ASSETS_cg} WITH_METADATA)
 
-add_executable(breakout ${SOURCES} ${ASSETS} ${ASSETS_${FXSDK_PLATFORM}})
-target_compile_options(breakout PRIVATE -Wall -Wextra -Os)
-target_link_libraries(breakout Gint::Gint)
+add_executable(pong ${SOURCES} ${ASSETS} ${ASSETS_${FXSDK_PLATFORM}})
+target_compile_options(pong PRIVATE -Wall -Wextra -Os)
+target_link_libraries(pong Gint::Gint)
 
 if("${FXSDK_PLATFORM_LONG}" STREQUAL fx9860G)
-  generate_g1a(TARGET breakout OUTPUT "pong.g1a"
+  generate_g1a(TARGET pong OUTPUT "pong.g1a"
     NAME "pong" ICON assets-fx/icon.png)
 elseif("${FXSDK_PLATFORM_LONG}" STREQUAL fxCG50)
-  generate_g3a(TARGET breakout OUTPUT "pong.g3a"
+  generate_g3a(TARGET pong OUTPUT "pong.g3a"
     NAME "pong" ICONS assets-cg/icon-uns.png assets-cg/icon-sel.png)
 endif()
