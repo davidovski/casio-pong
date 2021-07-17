@@ -7,13 +7,13 @@ This is my first attempt with [gint](https://gitea.planet-casio.com/Lephenixnoir
 Since this is a very simple game, controls are not included within the add-in. The controls are as following:
 
 ### player 1 
-4 - move up
-1 - move down 
-5 - serve the ball
+- 4: move up
+- 1: move down 
+- 5: serve the ball
 ### player 2
-÷ - move up
-- - move down 
-x - serve the ball
+- ÷: move up
+- -: move down 
+- x: serve the ball
 
 No score system has been added, yet the game will be played indefinitely.
 
