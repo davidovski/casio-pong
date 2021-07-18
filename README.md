@@ -12,8 +12,8 @@ Since this is a very simple game, controls are not included within the add-in. T
 - 5: serve the ball
 ### player 2
 - ÷: move up
-- -: move down 
-- x: serve the ball
+- \-: move down 
+- \x: serve the ball
 
 No score system has been added, yet the game will be played indefinitely.
 
